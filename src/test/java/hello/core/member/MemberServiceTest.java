@@ -5,6 +5,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
+
 public class MemberServiceTest {
 
     MemberService memberService;
@@ -23,7 +25,7 @@ public class MemberServiceTest {
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
         //then
-        Assertions.assertThat(member).isEqualTo(findMember);
+        assertThat(member).isEqualTo(findMember);
     }
 
 }
